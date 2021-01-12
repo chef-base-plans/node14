@@ -1,6 +1,6 @@
-[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.node12?repoName=chef-base-plans%2Fnode12&branchName=davy_1)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=232&repoName=chef-base-plans%2Fnode12&branchName=davy_1)
+[![Build Status](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_apis/build/status/chef-base-plans.node14?repoName=chef-base-plans%2Fnode12&branchName=davy_1)](https://dev.azure.com/chefcorp-partnerengineering/Chef%20Base%20Plans/_build/latest?definitionId=232&repoName=chef-base-plans%2Fnode12&branchName=davy_1)
 
-# node12
+# node14
 
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.  See [documentation](https://nodejs.org/en/)
 
@@ -16,15 +16,15 @@ Binary package
 
 Binary packages can be set as runtime or build time dependencies. See [Defining your dependencies](https://www.habitat.sh/docs/developing-packages/developing-packages/#sts=Define%20Your%20Dependencies) for more information.
 
-To add core/node12 as a dependency, you can add one of the following to your plan file.
+To add core/node14 as a dependency, you can add one of the following to your plan file.
 
 ##### Buildtime Dependency
 
-> pkg_build_deps=(core/node12)
+> pkg_build_deps=(core/node14)
 
 ##### Runtime dependency
 
-> pkg_deps=(core/node12)
+> pkg_deps=(core/node14)
 
 ### Use as Tool
 
@@ -32,7 +32,7 @@ To add core/node12 as a dependency, you can add one of the following to your pla
 
 To install this plan, you should run the following commands to first install, and then link the binaries this plan creates.
 
-``hab pkg install core/node12 --binlink``
+``hab pkg install core/node14 --binlink``
 
 will add the following binaries to the PATH:
 
@@ -43,19 +43,19 @@ will add the following binaries to the PATH:
 For example:
 
 ```bash
-# hab pkg install core/node12 --binlink
-» Installing core/node12
-☁ Determining latest version of core/node12 in the 'stable' channel
-↓ Downloading core/node12/12.14.1/20200812143455
-☛ Verifying core/node12/12.14.1/20200812143455
-✓ Installed core/node12/12.14.1/20200812143455
-★ Install of core/node12/12.14.1/20200812143455 complete with 7 new packages installed.
-» Binlinking npm from core/node12/12.14.1/20200812143455 into /bin
-★ Binlinked npm from core/node12/12.14.1/20200812143455 to /bin/npm
-» Binlinking node from core/node12/12.14.1/20200812143455 into /bin
-★ Binlinked node from core/node12/12.14.1/20200812143455 to /bin/node
-» Binlinking npx from core/node12/12.14.1/20200812143455 into /bin
-★ Binlinked npx from core/node12/12.14.1/20200812143455 to /bin/npx
+# hab pkg install core/node14 --binlink
+» Installing core/node14
+☁ Determining latest version of core/node14 in the 'stable' channel
+↓ Downloading core/node14/14.15.4/20200812143455
+☛ Verifying core/node14/14.15.4/20200812143455
+✓ Installed core/node14/14.15.4/20200812143455
+★ Install of core/node14/14.15.4/20200812143455 complete with 7 new packages installed.
+» Binlinking npm from core/node14/14.15.4/20200812143455 into /bin
+★ Binlinked npm from core/node14/14.15.4/20200812143455 to /bin/npm
+» Binlinking node from core/node14/14.15.4/20200812143455 into /bin
+★ Binlinked node from core/node14/14.15.4/20200812143455 to /bin/node
+» Binlinking npx from core/node14/14.15.4/20200812143455 into /bin
+★ Binlinked npx from core/node14/14.15.4/20200812143455 to /bin/npx
 
 ```
 

@@ -1,16 +1,16 @@
-title 'Tests to confirm node12 exists'
+title 'Tests to confirm node14 exists'
 
 plan_origin = ENV['HAB_ORIGIN']
-plan_name = input('plan_name', value: 'node12')
+plan_name = input('plan_name', value: 'node14')
 
 control 'core-plans-node-exists' do
   impact 1.0
   title 'Ensure node exists'
   desc '
-  Verify node by ensuring binaries 
+  Verify node by ensuring binaries
   (1) exist and
   (2) are executable'
-  
+
   plan_installation_directory = command("hab pkg path #{plan_origin}/#{plan_name}")
   describe plan_installation_directory do
     its('exit_status') { should eq 0 }
