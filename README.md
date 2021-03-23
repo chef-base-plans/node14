@@ -1,35 +1,39 @@
-node14
+# node14
+
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. See documentation
 
-Maintainers
-The Core Planners: chef-core-planners@chef.io
-Type of Package
+
+# Maintainers
+* The Core Planners: chef-core-planners@chef.io
+
+# Type of Package
 Binary package
 
-Use as Dependency
+# Use as Dependency
 Binary packages can be set as runtime or build time dependencies. See Defining your dependencies for more information.
 
 To add core/node14 as a dependency, you can add one of the following to your plan file.
 
-Buildtime Dependency
-pkg_build_deps=(core/node14)
+### Buildtime Dependency
+>pkg_build_deps=(core/node14)
 
-Runtime dependency
-pkg_deps=(core/node14)
+### Runtime dependency
+>pkg_deps=(core/node14)
 
-Use as Tool
-Installation
+# Use as Tool
+### Installation
 To install this plan, you should run the following commands to first install, and then link the binaries this plan creates.
 
-hab pkg install core/node14 --binlink
+`hab pkg install core/node14 --binlink`
 
 will add the following binaries to the PATH:
 
-/bin/node
-/bin/npm
-/bin/npx
-For example:
+* /bin/node
+* /bin/npm
+* /bin/npx
 
+For example:
+```
 # hab pkg install core/node14 --binlink
 » Installing core/node14
 ☁ Determining latest version of core/node14 in the 'stable' channel
@@ -43,11 +47,13 @@ For example:
 ★ Binlinked node from core/node14/14.16.0/20200812143455 to /bin/node
 » Binlinking npx from core/node14/14.16.0/20200812143455 into /bin
 ★ Binlinked npx from core/node14/14.16.0/20200812143455 to /bin/npx
-Using an example binary
+```
+### Using an example binary
 You can now use the binary as normal. For example:
 
-/bin/node --help or node --help
+`/bin/node --help or node --help`
 
+```
 $ node --help
 Usage: node [options] [ script.js ] [arguments]
        node inspect [options] [ script.js | host:port ] [arguments]
@@ -61,3 +67,4 @@ Options:
   -c, --check                      syntax check script without executing
 ...
 ...
+```
